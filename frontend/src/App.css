@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #202536;
+  background: #f6f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; min-width: 320px; }
+button { font: inherit; cursor: pointer; }
+
+.dashboard { min-height: 100vh; }
+
+.sidebar {
+  width: 235px;
+  background: #171b2c;
+  color: #fff;
+  position: fixed;
+  inset: 0 auto 0 0;
+  padding: 30px 20px;
+}
+
+.sidebar h2 { margin: 0 0 48px; font-size: 25px; }
+.sidebar h2 span { color: #9a83ff; }
+.sidebar p { padding: 13px 14px; color: #a8aec2; border-radius: 9px; font-size: 14px; }
+.sidebar .nav-active { background: #302b50; color: #fff; }
+.sidebar-bottom { position: absolute; bottom: 28px; color: #8e95aa; font-size: 12px; }
+
+.main-content { margin-left: 235px; padding: 32px 4%; max-width: 1600px; }
+
+.topbar, .section-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.topbar { margin-bottom: 28px; }
+.eyebrow { color: #898fa3; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; }
+h1 { font-size: 27px; margin: 8px 0; }
+.avatar { background: #e7e1ff; color: #5941b5; border-radius: 50%; padding: 12px; font-weight: 700; }
+
+.welcome { background: linear-gradient(115deg, #282343, #51417c); color: white; border-radius: 17px; padding: 26px 30px; display: flex; justify-content: space-between; align-items: center; }
+.welcome .eyebrow { color: #c4b8ff; }
+.welcome h2 { font-size: 23px; margin: 10px 0; }
+.welcome p:last-child { color: #d5d0e8; font-size: 13px; }
+.welcome-icon { font-size: 42px; color: #c9bcff; }
+
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; margin: 22px 0 32px; }
+.stat-card, .product-card, .orders-section { background: white; border: 1px solid #e9eaf1; border-radius: 13px; }
+.stat-card { padding: 21px; }
+.stat-card p { font-size: 13px; color: #72798c; margin: 0; }
+.stat-card h2 { font-size: 27px; margin: 14px 0 9px; }
+.stat-card span { font-size: 11px; color: #9096a7; }
+
+.products-section { margin-bottom: 30px; }
+.section-heading { margin-bottom: 17px; }
+.section-heading h2 { font-size: 18px; margin: 0 0 7px; }
+.section-heading p { color: #858b9c; font-size: 12px; margin: 0; }
+.demo-label, .order-count { font-size: 10px; font-weight: 700; color: #6851c6; background: #eeeaff; padding: 8px 10px; border-radius: 6px; }
+
+.products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.product-card { padding: 20px; }
+.product-icon { width: 58px; height: 58px; display: grid; place-items: center; background: #f0edff; border-radius: 12px; font-size: 28px; }
+.product-card h3 { font-size: 14px; margin: 18px 0 8px; }
+.product-card p { font-size: 19px; font-weight: 700; margin: 0 0 19px; }
+.product-card button { width: 100%; border: 0; background: #5b49ba; color: white; padding: 11px; border-radius: 7px; font-size: 12px; font-weight: 600; }
+.product-card button span { float: right; }
+
+.orders-section { padding: 22px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th { font-size: 10px; letter-spacing: .7px; color: #8c92a3; background: #fafafe; }
+th, td { padding: 16px 12px; border-bottom: 1px solid #eff0f5; font-size: 12px; white-space: nowrap; }
+td { color: #51586a; }
+.status { background: #fff0d7; color: #986414; border-radius: 20px; padding: 6px 9px; font-size: 10px; }
+.empty-state { text-align: center; color: #9298a7; padding: 30px 10px; }
+footer { text-align: center; color: #9a9eac; font-size: 11px; padding: 25px; }
+
+@media (max-width: 900px) {
+  .sidebar { width: 175px; padding: 24px 12px; }
+  .main-content { margin-left: 175px; padding: 25px 18px; }
+  .products { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .sidebar { display: none; }
+  .main-content { margin-left: 0; padding: 20px 14px; }
+  .welcome { padding: 20px; }
+  .welcome h2 { font-size: 19px; }
+}
+
+.server-status { text-align: center; color: #25845b; font-size: 12px; }
